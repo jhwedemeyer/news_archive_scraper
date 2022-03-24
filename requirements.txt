@@ -1,0 +1,6 @@
+itemloaders
+sqlalchemy
+nltk
+germalemma
+datetime
+PyMySQL
