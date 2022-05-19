@@ -7,10 +7,15 @@ Scraper to download historic news articles from online newspaper archives of the
 ## Getting Started
 1) Setup Scrapy according to the [official guide](https://docs.scrapy.org/en/latest/intro/install.html).
 2) Clone this repository.
-3) Run the scraper locally with e.g. '''scrapy crawl welt''' resp. '''spiegel''', '''zeit''' or '''tagesspiegel'''.
+3) Run the scraper locally with e.g. ```scrapy crawl welt``` resp. ```spiegel```, ```zeit``` or ```tagesspiegel```.
 
-## How it works
-The process of scraping depends on the newspaper. Still, it always closely follows these three steps:
+## How it Works
+
+The scraping procedure depends on the newspaper. Still, the archives are usually structured as follows:
+- Per year there is an overview page, where all published magazins are listed.
+- Per magazin there is an overview page, where all articles are listed.
+
+This hierarchy of pages is parsed as follows:
 
 1) Get all magazin urls of year X.
 2) Get all article urls of the magazins.
